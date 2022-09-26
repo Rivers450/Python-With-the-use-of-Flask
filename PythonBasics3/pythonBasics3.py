@@ -28,8 +28,9 @@ def starts_with_non_number(s):
 # with at least one character on either side!
 def multiple_words(s):
   
-  match=re.search('[^\s] +[^\s]', s)
-  if(match==None):
+  match = re.search('[^\s] +[^\s]', s)
+
+  if(match == None):
     return False
   else:
     return True
@@ -43,6 +44,7 @@ def multiple_words(s):
 # Note: URLs will be in the format http://www.example.com. There will not be anything after the TLD
 # Hint: the URL should start with https and end with one of the TLDs
 def reserved_us_tld(s):
+  
   match = re.search("^https.*(.gov|.edu|.mil)$", s)
   if(match == None):
     return False
