@@ -14,9 +14,8 @@ import re
 # Note: Be sure to use RegEx!
 def starts_with_non_number(s):
 
-  match=re.search('^[0-9]',s)
-  
-  if(match==None):
+  match = re.search('^[0-9]', s)
+  if(match == None):
       return True
   else:
       return False
