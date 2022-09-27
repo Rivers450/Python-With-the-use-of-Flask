@@ -14,11 +14,10 @@ import re
 # Note: Be sure to use RegEx!
 def starts_with_non_number(s):
 
-  lookForNum = re.search('^[0-9]', s)
-  if(lookForNum == None):
-      return True
-  else:
+  if(re.search('^[0-9]', s)):
       return False
+  else:
+      return True
 
 # # Part B. multiple_words
 # Define a function multiple_words(s) that takes a string and returns true
@@ -28,12 +27,11 @@ def starts_with_non_number(s):
 # with at least one character on either side!
 def multiple_words(s):
   
-  lookForMultiWord = re.search('[^\s] +[^\s]', s)
 
-  if(lookForMultiWord == None):
-    return False
-  else:
+  if(re.search('[^\s] +[^\s]', s)):
     return True
+  else:
+    return False
 
 
 # Part C. reserved_us_tld
@@ -45,8 +43,7 @@ def multiple_words(s):
 # Hint: the URL should start with https and end with one of the TLDs
 def reserved_us_tld(s):
   
-  lookForEndingWeb = re.search("^https.*(.gov|.edu|.mil)$", s)
-  if(lookForEndingWeb == None):
-    return False
-  else:
+  if(re.search("^https.*(.gov|.edu|.mil)$", s)):
     return True
+  else:
+    return False
