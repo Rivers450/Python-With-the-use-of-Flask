@@ -13,7 +13,7 @@ import re
 # (For our purposes, a number is any character that is 0,1,2,3,4,5,6,7,8, or 9.)
 # Note: Be sure to use RegEx!
 def starts_with_non_number(s):
-
+#
   if(re.search('^[0-9]', s)):
       return False
   else:
@@ -27,7 +27,6 @@ def starts_with_non_number(s):
 # with at least one character on either side!
 def multiple_words(s):
   
-
   if(re.search('[^\s] +[^\s]', s)):
     return True
   else:
@@ -42,7 +41,7 @@ def multiple_words(s):
 # Note: URLs will be in the format http://www.example.com. There will not be anything after the TLD
 # Hint: the URL should start with https and end with one of the TLDs
 def reserved_us_tld(s):
-  
+  #
   if(re.search("^https.*(.gov|.edu|.mil)$", s)):
     return True
   else:
