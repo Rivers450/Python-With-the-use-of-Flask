@@ -14,8 +14,8 @@ import re
 # Note: Be sure to use RegEx!
 def starts_with_non_number(s):
 
-  match = re.search('^[0-9]', s)
-  if(match == None):
+  lookForNum = re.search('^[0-9]', s)
+  if(lookForNum == None):
       return True
   else:
       return False
@@ -28,9 +28,9 @@ def starts_with_non_number(s):
 # with at least one character on either side!
 def multiple_words(s):
   
-  match = re.search('[^\s] +[^\s]', s)
+  lookForMultiWord = re.search('[^\s] +[^\s]', s)
 
-  if(match == None):
+  if(lookForMultiWord == None):
     return False
   else:
     return True
@@ -45,8 +45,8 @@ def multiple_words(s):
 # Hint: the URL should start with https and end with one of the TLDs
 def reserved_us_tld(s):
   
-  match = re.search("^https.*(.gov|.edu|.mil)$", s)
-  if(match == None):
+  lookForEndingWeb = re.search("^https.*(.gov|.edu|.mil)$", s)
+  if(lookForEndingWeb == None):
     return False
   else:
     return True
